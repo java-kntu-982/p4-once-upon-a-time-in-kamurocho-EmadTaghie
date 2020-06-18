@@ -7,4 +7,5 @@ open module p.once.upon.a.time.in.kamurocho {
     requires transitive javafx.swing;
     requires transitive javafx.web;
     requires java.logging;
+    requires kotlin.stdlib;
 }
