@@ -49,11 +49,16 @@ public class Play {
                         }
                     });
 
-                    for (Soldier friendlySoldier : lvl1.getFriendlySoldiers()) {
-                        if (friendlySoldier.move()) {
-                            friendlySoldier.attack();
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            for (Soldier friendlySoldier : lvl1.getFriendlySoldiers()) {
+                                if (friendlySoldier.move()) {
+                                    friendlySoldier.attack();
+                                }
+                            }
                         }
-                    }
+                    });
                     if(lvl1.getStatus() == 1){
                         start(false);
                         Platform.runLater(new Runnable() {
@@ -71,7 +76,7 @@ public class Play {
                     }
                 }
             }
-        }, 0, 5);
+        }, 0, 1000/60);
     }
     public void start(boolean start) {
         this.start = start;

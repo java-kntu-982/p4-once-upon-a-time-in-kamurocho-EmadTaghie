@@ -232,7 +232,7 @@ public abstract class Soldier{
                 return new double[]{getAngle(target.getPos()) + Math.toRadians(180), getAngle(target.getPos()) + Math.toRadians(180)};
             }
         }
-        return new double[]{getAngle(target.getPos()) + angle, getAngle(target.getPos()) + angle};
+        return new double[]{getAngle(target.getPos()) + angle, getAngle(target.getPos()) - angle};
     }
 
     public int getId() {

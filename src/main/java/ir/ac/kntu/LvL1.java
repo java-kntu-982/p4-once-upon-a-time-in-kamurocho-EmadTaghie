@@ -40,11 +40,11 @@ public class LvL1 {
         for(int i = 0; i < waves.length; i++){
             waves[i] = new ArrayList<>();
         }
-        waves[0] = wave.createWave(20, 0, 20, 0, 0);
-        waves[1] = wave.createWave(30, 0, 20, 0, 0);
-        waves[2] = wave.createWave(20, 0, 30, 0, 0);
-        waves[3] = wave.createWave(15, 10, 15, 0, 0);
-        waves[4] = wave.createWave(15, 15, 15, 0, 0);
+        waves[0] = wave.createWave(10, 0, 10, 0, 0);
+        waves[1] = wave.createWave(10, 0, 15, 0, 0);
+        waves[2] = wave.createWave(15, 0, 15, 0, 0);
+        waves[3] = wave.createWave(10, 5, 10, 0, 0);
+        waves[4] = wave.createWave(10, 10, 10, 0, 0);
         waves[5] = wave.createWave(0, 0, 0, 1, 0);
         block.creatBlocks(getWidth(), getHeight());
         makeRoot(waveCounter);
@@ -129,7 +129,7 @@ public class LvL1 {
     private void configFriendlySoldiers(){
         double spacing = getHeight()/(getFriendlySoldiers().size() + 1);
         for(int i = 0; i < getFriendlySoldiers().size(); i++){
-            friendlySoldiers.get(i).changePos(getWidth() - getWidth()/4, (1 + i) * spacing);
+            friendlySoldiers.get(i).changePos(getWidth() - getWidth()/3, (1 + i) * spacing);
             friendlySoldiers.get(i).setEnemySoldiers(getEnemySoldiers());
             friendlySoldiers.get(i).setFriendlySoldiers(getFriendlySoldiers());
             friendlySoldiers.get(i).setBlock(getBlock());

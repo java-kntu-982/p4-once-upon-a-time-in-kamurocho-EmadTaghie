@@ -110,6 +110,6 @@ public abstract class FriendlySoldier extends Soldier{
     }
 
     public void gotHit(double damage){
-//        decreaseHealth(damage);
+        decreaseHealth(damage);
     }
 }
